@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ayrton Personal</title>
+</head>
+<body>
+    
+    <header> 
+                 <div class="logo">      
+                <img src="https://images.vexels.com/media/users/3/302031/isolated/preview/5176cf3bcb619d04085e4955ef1a2dbc-dois-halteres-em-um-fundo-azul.png" alt=""  width="35px">
+                <h2>Ayrton Personal</h2>
+                </div> 
+                <nav class="navbar">
+                <ul class="menu">
+                <li><a href="#sobre" class="menu-link">Sobre mim</a></li>
+                <li><a href="#servicos" class="menu-link">Meus serviços</a></li>
+                <li><a href="#contato"class="menu-link">Contato</a></li>
+              </ul>
+              </nav>
+              
+   </header>
+
+<section class="sobre" id="sobre">
+    <div class="main">
+        <div class="conteudo-sobre">
+            <h2>Sobre mim</h2>
+            <p>Sou Ayrton, personal trainer dedicado a ajudar você a atingir seus objetivos com treinos personalizados, motivação constante e acompanhamento especializado. Seja para emagrecimento, ganho de massa muscular ou condicionamento físico, desenvolvo programas eficientes e adaptados às suas necessidades.
+            Com experiência e conhecimento, proporciono um treinamento seguro e eficaz, focado em resultados reais. Se você busca evolução e qualidade de vida, estou aqui para te guiar nessa jornada.</p>
+        </div>
+        <div class="foto-ayrton">
+            <img src="download.png" alt="Foto do Personal Trainer Ayrton">
+        </div>
+    </div>
+  
+</section>
+
+<section class="servicos" id="servicos">
+    <h2>Meus Serviços</h2>
+    <div class="card-container">
+    <div class="card">
+        <img src="https://plus.unsplash.com/premium_photo-1661580282598-6883482b4c8e?fm=jpg&q=60&w=3000" alt="Imagem de um personal trainer com aluno" width="278px">
+        <h3>Personal Trainer</h3>
+        <p>Seja para emagrecimento, ganho de massa muscular, melhora do condicionamento físico ou qualidade de vida, ofereço um acompanhamento individualizado, adaptado às suas necessidades e rotina.</p>
+    </div>
+    <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQkuP58bqYXo_yOixxKtGNkP-vwsV5DP_2bRg&s" alt="Treinamento funcional ao ar livre">
+        <h3>Funcional ao Ar Livre</h3>
+        <p>O Treinamento funcional ao ar livre é a prática saudável de exercícios físicos que são realizados em ambientes abertos, como praças, parques e praias, proporcionando mais contato com a natureza.</p>
+    </div>
+</div>
+</section>
+
+<section class="contato" id="contato">
+    <div class="chat">
+        <h2>Entre em Contato</h2>
+        <p>Agende sua avaliação aqui:</p>
+        <input type="text" id="nome" placeholder="Seu nome">
+        <textarea id="mensagem" placeholder="Sua mensagem"></textarea>
+        <button onclick="enviarMensagem()">Enviar pelo WhatsApp</button>
+    </div>
+</section>
+
+<footer>
+    &copy; 2025 - Todos os Direitos Reservados - Ayrton Personal - Desenvolvido por Vitoria Pordeus
+</footer>
+
+<script>
+    function enviarMensagem() {
+        let nome = document.getElementById('nome').value;
+        let mensagem = document.getElementById('mensagem').value;
+        let numeroWhatsApp = "SEU_NUMERO_AQUI"; // Substitua pelo número correto
+        let url = `https://api.whatsapp.com/send?phone=${numeroWhatsApp}&text=Olá, meu nome é ${nome}. ${mensagem}`;
+        window.open(url, '_blank');
+    }
+</script>
+
+</body>
+</html>
